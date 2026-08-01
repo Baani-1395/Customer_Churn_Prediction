@@ -1,25 +1,39 @@
 # Customer Churn Prediction
 
-A Machine Learning project that predicts whether a customer is likely to **churn (leave the company)** or **remain with the company** based on customer information. This project demonstrates the complete machine learning workflow, from data preprocessing to model evaluation and prediction.
+A Machine Learning project that predicts whether a customer is likely to **churn (leave the company)** or **stay with the company** based on customer information. This project demonstrates the complete machine learning pipeline, from data preprocessing to model evaluation and prediction.
 
 ---
 
-## Project Overview
+## Overview
 
-Customer churn prediction helps businesses identify customers who are likely to leave their services. By predicting churn in advance, companies can take preventive actions to improve customer retention.
+Customer churn prediction helps businesses identify customers who are likely to leave their services. By identifying these customers early, companies can take appropriate actions to improve customer retention.
 
-This project covers:
+This project includes:
 
-* Data loading and preprocessing
+* Data preprocessing and cleaning
 * Exploratory Data Analysis (EDA)
 * Feature encoding
-* Model training
+* Machine Learning model training
 * Model comparison
 * Hyperparameter tuning
 * Model evaluation
 * Feature importance analysis
-* Saving the trained model
-* Predicting churn for new customers
+* Model saving and prediction
+
+---
+
+## Features
+
+* Customer churn prediction using Machine Learning
+* Data cleaning and preprocessing
+* Exploratory Data Analysis (EDA)
+* Logistic Regression model
+* Random Forest Classifier
+* Hyperparameter tuning using GridSearchCV
+* ROC Curve and AUC Score evaluation
+* Feature Importance visualization
+* Save trained model using Joblib
+* Predict churn for new customer data
 
 ---
 
@@ -42,7 +56,7 @@ This project covers:
 
 **Dataset:** `Churn_Modelling.csv`
 
-The dataset contains customer information including:
+The dataset contains customer information such as:
 
 * Credit Score
 * Geography
@@ -57,41 +71,40 @@ The dataset contains customer information including:
 
 ### Target Variable
 
-* **Exited**
+**Exited**
 
-  * `0` → Customer Stays
-  * `1` → Customer Churns
+* **0** → Customer Stays
+* **1** → Customer Churns
 
 ---
 
 ## Project Structure
 
-```text
 Customer-Churn-Prediction/
 │
-├── Customer_Churn_Prediction.ipynb
-├── Churn_Modelling.csv
-├── churn_model.pkl
-├── label_encoder.pkl
-├── README.md
-└── requirements.txt
-```
-
+├── Customer_Churn_Prediction.ipynb      # Jupyter Notebook
+├── Churn_Modelling.csv                  # Dataset
+├── Churn_model.pkl                      # Trained Machine Learning model
+├── label_encoder.pkl                    # Saved Label Encoder
+├── README.md                            # Project documentation
+├── requirements.txt                     # Required Python libraries
+└── Screenshots/
+   
 ---
 
 ## Machine Learning Workflow
 
 1. Import required libraries
 2. Load the dataset
-3. Explore and understand the data
+3. Explore the dataset
 4. Clean and preprocess the data
-5. Encode categorical features using LabelEncoder
-6. Split the dataset into training and testing sets
-7. Train a Logistic Regression model
-8. Train a Random Forest model
+5. Encode categorical features
+6. Split data into training and testing sets
+7. Train Logistic Regression model
+8. Train Random Forest model
 9. Compare both models
-10. Perform hyperparameter tuning using GridSearchCV
-11. Evaluate the model using multiple performance metrics
+10. Tune Random Forest using GridSearchCV
+11. Evaluate model performance
 12. Analyze feature importance
 13. Save the trained model
 14. Predict churn for new customer data
@@ -117,45 +130,42 @@ The models are evaluated using:
 
 ---
 
-## Installation
 
-Clone this repository:
 
-```bash
-git clone https://github.com/your-username/Customer-Churn-Prediction.git
-```
+## How to Run
 
-Go to the project folder:
-
-```bash
-cd Customer-Churn-Prediction
-```
-
-Install the required libraries:
-
-```bash
-pip install -r requirements.txt
-```
-
-Launch Jupyter Notebook:
+1. Open Jupyter Notebook.
 
 ```bash
 jupyter notebook
 ```
 
-Open:
+2. Open the notebook:
 
 ```text
 Customer_Churn_Prediction.ipynb
 ```
 
-Run all cells from top to bottom.
+3. Run all cells sequentially using **Shift + Enter**.
+
+4. The notebook will:
+
+* Load the dataset
+* Perform data preprocessing
+* Conduct Exploratory Data Analysis (EDA)
+* Train Logistic Regression and Random Forest models
+* Compare model performance
+* Perform hyperparameter tuning
+* Evaluate the trained models
+* Save the trained model (`churn_model.pkl`)
+* Save the label encoder (`label_encoder.pkl`)
+* Predict whether a customer will churn or stay
 
 ---
 
 ## Output
 
-The project predicts whether a customer is likely to churn and compares different machine learning models to determine the best-performing model. It also identifies the most important factors influencing customer churn.
+The project predicts whether a customer is likely to churn and compares multiple Machine Learning models to identify the best-performing model. It also highlights the key factors influencing customer churn.
 
 ---
 
@@ -165,8 +175,8 @@ The project predicts whether a customer is likely to churn and compares differen
 * Improve feature engineering
 * Use One-Hot Encoding
 * Handle class imbalance using SMOTE
-* Try advanced algorithms such as XGBoost or LightGBM
-* Build a user-friendly web application
+* Experiment with advanced models such as XGBoost and LightGBM
+* Build a web application for real-time predictions
 
 ---
 
